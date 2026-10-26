@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - AstroDaily</title>
+  <meta name="description" content="Privacy Policy for AstroDaily: Daily Astrology, Natal Chart & Cosmic Radar.">
+  <link rel="icon" type="image/png" href="assets/app_logo.png">
+  <link rel="apple-touch-icon" href="assets/app_logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #080B14;
+      --card-bg: rgba(18, 24, 42, 0.82);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --text-main: #F8FAFC;
+      --text-muted: #94A3B8;
+      --accent-gold: #F5B841;
+      --accent-violet: #9D6BFF;
+      --accent-cyan: #38BDF8;
+      --accent-gradient: linear-gradient(135deg, #F5B841 0%, #9D6BFF 50%, #38BDF8 100%);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .glow-circle {
+      position: fixed;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      filter: blur(90px);
+      z-index: -1;
+      pointer-events: none;
+    }
+    .glow-1 {
+      top: -150px; right: -150px;
+      background: radial-gradient(circle, rgba(245, 184, 65, 0.12) 0%, rgba(157, 107, 255, 0.08) 50%, transparent 70%);
+    }
+    .glow-2 {
+      bottom: -200px; left: -150px;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.1) 0%, rgba(157, 107, 255, 0.06) 50%, transparent 70%);
+    }
+
+    header {
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--card-border);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      background: rgba(8, 11, 20, 0.85);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .header-container {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(245, 184, 65, 0.3);
+    }
+
+    .logo-text {
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: -0.5px;
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+    .nav-link:hover { color: var(--accent-gold); }
+
+    main {
+      flex: 1;
+      max-width: 860px;
+      margin: 48px auto;
+      padding: 0 24px;
+      width: 100%;
+    }
+
+    .policy-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 44px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    @media (max-width: 640px) {
+      .policy-card { padding: 24px; }
+      main { margin: 24px auto; }
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 5px 14px;
+      border-radius: 9999px;
+      background: rgba(245, 184, 65, 0.12);
+      border: 1px solid rgba(245, 184, 65, 0.3);
+      color: var(--accent-gold);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 2.3rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+
+    .last-updated {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin: 32px 0 14px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2::before {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent-violet);
+    }
+
+    p { margin-bottom: 16px; color: #CBD5E1; }
+    ul { margin: 0 0 20px 24px; color: #CBD5E1; }
+    li { margin-bottom: 8px; }
+
+    .highlight-box {
+      background: rgba(157, 107, 255, 0.08);
+      border-left: 4px solid var(--accent-violet);
+      padding: 16px 20px;
+      border-radius: 0 14px 14px 0;
+      margin: 24px 0;
+    }
+    .highlight-box p { margin: 0; color: #F1F5F9; font-weight: 500; }
+
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding: 32px 20px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="glow-circle glow-1"></div>
+  <div class="glow-circle glow-2"></div>
+
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo-container">
+        <img src="assets/app_logo.png" alt="AstroDaily Logo" class="logo-icon">
+        <span class="logo-text">AstroDaily</span>
+      </a>
+      <a href="index.html" class="nav-link">← Back to App</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="policy-card">
+      <span class="tag">Privacy First Astrological Guidance</span>
+      <h1>Privacy Policy</h1>
+      <p class="last-updated">Effective Date: October 26, 2026 • Application: AstroDaily (com.turkmendigital.astrodaily.app)</p>
+
+      <div class="highlight-box">
+        <p><strong>Summary:</strong> AstroDaily is engineered with a strict on-device, offline-first philosophy. Your birth date, exact birth time, location coordinates, natal placements, synastry matches, and oracle draws remain private and securely stored exclusively on your device. We do not maintain user databases, servers, or sell your personal astrological information.</p>
+      </div>
+
+      <h2>1. Overview & Information We Process Locally</h2>
+      <p>AstroDaily does not require account creation, social logins, email registration, or passwords. All astronomical computations—including Swiss Ephemeris mathematical planet calculations, ascendant/house cusps, synastry aspect angles, and daily transit energy scores—are executed locally on your mobile processor.</p>
+      <p>Data stored locally on your device includes:</p>
+      <ul>
+        <li><strong>Birth Profile Data:</strong> Name or nickname, birth date, birth time, and birth city coordinates (used strictly to compute natal charts and house systems).</li>
+        <li><strong>Synastry Partners:</strong> Names and birth data of individuals you choose to compare for relationship compatibility.</li>
+        <li><strong>User Preferences:</strong> Theme choice (Cosmic Dark or Luminous Ivory), preferred house calculation system (Placidus / Equal), and notification toggles.</li>
+        <li><strong>Daily Oracle & Journal History:</strong> Cards drawn, daily lucky day bookmarks, and ritual activity.</li>
+      </ul>
+      <p>We do not operate backend servers that collect or harvest your sensitive birth or identity data.</p>
+
+      <h2>2. Device Permissions Used by AstroDaily</h2>
+      <p>AstroDaily requests minimal device access, solely to deliver user-requested functionality:</p>
+      <ul>
+        <li><strong>Local Notifications:</strong> If enabled, the app schedules local notifications on your device to deliver your morning Cosmic Radar scores and alert you to major lunar phases (New Moon & Full Moon). These notifications are triggered internally by the operating system without transmitting any personal data or push tokens to external servers.</li>
+      </ul>
+
+      <h2>3. Advertising (Google AdMob)</h2>
+      <p>To keep AstroDaily accessible for free, the app displays non-intrusive advertisements powered by Google AdMob.</p>
+      <p>Google AdMob and its advertising partners may collect device identifiers (such as Apple's IDFA on iOS or Google Advertising ID on Android), coarse IP location, and diagnostics to serve contextual or personalized advertisements according to Google's Privacy Policy.</p>
+      <p>On iOS, AstroDaily strictly adheres to Apple's App Tracking Transparency (ATT) framework. You have full control over whether to permit tracking, and you can modify your tracking preferences at any time in your device's <em>Settings &gt; Privacy &amp; Security &gt; Tracking</em>.</p>
+      <p>For more details on Google's privacy practices, visit: <a href="https://policies.google.com/technologies/ads" target="_blank" style="color: var(--accent-cyan); text-decoration: none;">Google Advertising Privacy &amp; Terms</a>.</p>
+
+      <h2>4. Data Storage, Retention & Deletion</h2>
+      <p>You have complete control over your astrological records. You can modify your birth profile, remove synastry partners, or reset the app entirely at any time from the in-app Settings screen. Uninstalling AstroDaily from your device permanently removes all locally stored data.</p>
+
+      <h2>5. Children's Privacy</h2>
+      <p>AstroDaily is intended for a general audience and is not directed towards children under the age of 13. We do not knowingly collect or request personal identifiable information from children.</p>
+
+      <h2>6. Updates to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time to reflect operational, legal, or regulatory updates. Any changes will be posted on this page with an updated "Effective Date".</p>
+
+      <h2>7. Contact Information</h2>
+      <p>If you have any questions, inquiries, or feedback regarding your privacy in AstroDaily, please reach out to us at:</p>
+      <p style="font-weight: 700; color: #fff;">Turkmen Digital: <a href="mailto:turkmendigital@gmail.com" style="color: var(--accent-gold); text-decoration: none;">turkmendigital@gmail.com</a></p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Turkmen Digital. All rights reserved. AstroDaily is a trademark of Turkmen Digital.</p>
+  </footer>
+</body>
+</html>
+
